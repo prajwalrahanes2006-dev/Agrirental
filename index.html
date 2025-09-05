@@ -1,0 +1,104 @@
+<!-- save as index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgriRental — Farming Equipment Rental</title>
+  <style>
+    :root{
+      --accent:#2b8a3e;
+      --accent-2:#1f7a34;
+      --muted:#6b7280;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:#0b1720;background:linear-gradient(180deg,#f7faf7 0%, #eef7ee 100%);}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:1100px;margin:0 auto;}
+    .brand{display:flex;gap:.75rem;align-items:center;font-weight:700;font-size:1.125rem;color:var(--accent-2);}
+    .brand .logo{width:42px;height:42px;border-radius:8px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;font-weight:800;}
+    .nav-links{display:flex;gap:1rem;align-items:center;}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn{background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:700;}
+    .btn:hover{background:var(--accent-2);}
+    .hero{max-width:900px;margin:2rem auto;border-radius:16px;padding:2rem;
+      background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(248,252,247,0.9));text-align:center;}
+    h1{margin:.5rem 0;font-size:2rem;color:#062018;}
+    p.lead{color:var(--muted);margin:0 0 1.25rem;font-size:1rem}
+    .cta-row{margin-top:1rem;}
+    .features{max-width:1100px;margin:2rem auto;padding:0 1rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 8px 20px rgba(10,20,10,0.04);}
+    .card h3{margin:0 0 .5rem;font-size:1rem}
+    .card p{color:var(--muted);margin:0;font-size:.95rem}
+    footer{max-width:1100px;margin:2rem auto;padding:1rem;border-top:1px solid #eee;color:var(--muted);
+      display:flex;justify-content:space-between;align-items:center;}
+    @media (max-width:700px){.features{grid-template-columns:1fr}}
+    .auth-buttons{display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;}
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="brand">
+      <div class="logo">AR</div>
+      AgriRental
+    </div>
+    <nav class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn" href="#get-started">Get Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Rent tractors & farm equipment — fast, affordable, local.</h1>
+      <p class="lead">
+        Browse nearby equipment, book hourly or daily, and pay securely. Perfect for small farmers,
+        contractors, and community projects.
+      </p>
+      <div class="cta-row">
+        <a class="btn" id="get-started" href="#signup">Get Started</a>
+      </div>
+    </section>
+
+    <section class="features" id="how-it-works">
+      <div class="card">
+        <h3>Choose & Book</h3>
+        <p>Filter by equipment type, availability, and price. Book for hours or days with a single click.</p>
+      </div>
+      <div class="card">
+        <h3>Secure Payments</h3>
+        <p>Pay via QR, card, or UPI. Transparent fees and rental insurance options for peace of mind.</p>
+      </div>
+      <div class="card">
+        <h3>Delivery & Support</h3>
+        <p>Owner delivery and on-site support for new operators. Training material available for every machine.</p>
+      </div>
+    </section>
+
+    <section style="max-width:900px;margin:0 auto 3rem;padding:1rem" id="signup">
+      <div style="background:white;border-radius:12px;padding:18px;box-shadow:0 8px 20px rgba(10,20,10,0.04);text-align:center;">
+        <h2>Welcome to AgriRental</h2>
+        <p style="color:var(--muted)">Sign up or log in to start renting or listing equipment.</p>
+        <div class="auth-buttons">
+          <a href="signup.html" class="btn">Sign Up</a>
+          <a href="login.html" class="btn">Login</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> AgriRental</div>
+    <div>Built for smallholders · Terms · Privacy</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
